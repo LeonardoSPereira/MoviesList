@@ -1,14 +1,11 @@
-const AppError = require("../utils/AppError")
+const AppError = require("../utils/AppError");
+const sqliteConnection = require("../database/sqlite")
 
 class UserController {
-    create (req, res) {
+    async create (req, res) {
         const { name, email, password } = req.body;
 
-        if(!name) {
-            throw new AppError("O nome é obrigatório!")
-        }
-    
-        return res.status(201).json({ name, email, password })
+        const database = await sqliteConnection()
     }
 }
 
