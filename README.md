@@ -7,7 +7,7 @@
 
 </div>
 
-## 📝 Table of Contents
+## 📝 Tabela de conteúdos
 
 - [Sobre](#about)
 - [Iniciando o projeto](#getting_started)
@@ -84,7 +84,7 @@ Com isso, seu usuário será cadastrado no banco de dados.
 - Para analisarmos o conteúdo dentro do nosso banco de dados, abra o Beekeeper, selecione o tipo de conexão para "SQLite" e selecione o caminho onde seu arquivo .db está localizado e clique em conecte.
 
 
-- A partir disso, abra a tabela "users" e verá seu usuário cadastrado.
+- A partir disso, abra a tabela "users" e verá seu usuário cadastrado. A sua senha não aparecerá como cadastrado, visto que ela foi criptografada antes de ser enviada ao banco de dados.
 
 
 ## ⛏️ Built Using <a name = "built_using"></a>
