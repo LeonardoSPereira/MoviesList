@@ -66,9 +66,9 @@ Esse código irá executar as migrations presentes no código necessárias para 
 
 Para iniciar o uso, abra o Insonmnia e o Beekeeper.
 - No Insonmnia, inicie um novo arquivo de testes e clique o ícone + próximo ao input de filtro e selecione a opção: "HTTP Request":
-![Local do HTTP Request](image.png)
 
-- Mude o tipo de requisição de GET para POST e digite o seguinte endereço ao lado: "localhost:3333/users", para que iniciemos o cadastro de nosso usuário.![URL](image-1.png)
+
+- Mude o tipo de requisição de GET para POST e digite o seguinte endereço ao lado: "localhost:3333/users", para que iniciemos o cadastro de nosso usuário.
 
 - Em seguida, vamos adicionar nosso arquivo em formato json, para que seja enviado ao nosso banco de dados:
 ```
@@ -82,7 +82,7 @@ Para iniciar o uso, abra o Insonmnia e o Beekeeper.
 Com isso, seu usuário será cadastrado no banco de dados.
 
 - Para analisarmos o conteúdo dentro do nosso banco de dados, abra o Beekeeper, selecione o tipo de conexão para "SQLite" e selecione o caminho onde seu arquivo .db está localizado e clique em conecte.
-![Conectando o Beekeeper](image-2.png)
+
 
 - A partir disso, abra a tabela "users" e verá seu usuário cadastrado.
 
