@@ -10,15 +10,12 @@ class NotesController {
             throw new AppError("O valor da nota deve ser um número")
         }
 
-
         const ratingInteger = Number.isInteger(rating);
         const ratingInterval = rating >= 1 && rating <= 5;
-        console.log(ratingInteger, ratingInterval)
 
         if(!ratingInteger || !ratingInterval) {
             throw new AppError("O valor da nota deve ser um número inteiro entre 1 e 5");
         }
-
 
         const [note_id] = await knex("movieNotes").insert({
             title,
