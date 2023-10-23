@@ -4,7 +4,7 @@ const AppError = require("../utils/AppError");
 class NotesController {
     async create(request, response) {
         const { title, description, rating, tags } = request.body;
-        const { user_id } = request.params;
+        const user_id = request.user.id;
 
         if(typeof rating !== 'number') {
             throw new AppError("O valor da nota deve ser um número")
@@ -34,7 +34,7 @@ class NotesController {
 
         await knex("tags").insert(tagsInsert);
 
-        response.json()
+        return response.json()
     }
 
     async show(request, response) {
@@ -50,16 +50,18 @@ class NotesController {
     }
 
     async delete(request, response) {
-        const { id } = request.params;
+        const user_id = request.user.id;
 
-        await knex("movieNotes").where({ id }).delete();
+
+        await knex("movieNotes").where({ user_id }).delete();
 
         return response.json()
     }
 
     async index(request, response) {
-        const { user_id, title, tags } = request.query;
-        
+        const { title, tags } = request.query;
+        const user_id = request.user.id;        
+
         let notes;
 
         if(tags) {
