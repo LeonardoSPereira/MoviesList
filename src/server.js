@@ -1,5 +1,6 @@
 require("express-async-errors");
 const AppError = require("./utils/AppError");
+const uploadConfig = require("./config/upload");
 
 const migrationsRun = require("./database/sqlite/migrations");
 
@@ -13,6 +14,7 @@ app.listen(PORT, () => console.log(`🚀Server is running on Port ${PORT}`));
 
 app.use(express.json());
 
+app.use("/files", express.static(uploadConfig.UPLOADS_FOLDER));
 app.use(routes);
 
 migrationsRun();
