@@ -50,10 +50,9 @@ class NotesController {
     }
 
     async delete(request, response) {
-        const user_id = request.user.id;
+        const { id } = request.params;
 
-
-        await knex("movieNotes").where({ user_id }).delete();
+        await knex("movieNotes").where({ id }).delete();
 
         return response.json()
     }
