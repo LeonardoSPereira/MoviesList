@@ -1,4 +1,4 @@
-<h1 align="center">Movies List</h1>
+<h1 align="center">RocketMovies Back-End</h1>
 
 <div align="center">
 
